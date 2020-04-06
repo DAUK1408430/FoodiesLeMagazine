@@ -1,14 +1,52 @@
 /*sdfsfdsdfdsfs*/
 /* variables  */
 /* mixin ---------------  */
-/* reset  */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
 /* grilleDesktop  */
 /* grilleMoblie */
 /* sousGrilleContenu  */
 /* navPrincipale */
 /* navFooter */
 /* navLangue */
-/*header  */
+nav.menu {
+  background-color: 0;
+}
+
 /* footer  */
 /* listeProduit */
 /* pub  */
