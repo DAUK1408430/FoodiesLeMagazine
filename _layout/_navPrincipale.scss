@@ -1,1 +1,7 @@
 /* navPrincipale */
+
+nav.menu{
+    background-color: var(--noir);
+    @include flex(row, center, center);
+    
+}

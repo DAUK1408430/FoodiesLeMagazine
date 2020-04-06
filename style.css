@@ -48,12 +48,12 @@ img {
 /* grilleMoblie */
 /* sousGrilleContenu  */
 /* navPrincipale */
-/* navFooter */
-/* navLangue */
 nav.menu {
-  background-color: red;
+  background-color: var(--noir);
 }
 
+/* navFooter */
+/* navLangue */
 /* footer  */
 /* listeProduit */
 /* pub  */
