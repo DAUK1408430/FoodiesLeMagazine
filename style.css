@@ -1,5 +1,12 @@
 /*sdfsfdsdfdsfs*/
 /* variables  */
+:root {
+  --vert:hsl(66, 40%, 50%);
+  --orange:hsl(14, 80%, 50%);
+  --blanc:hsl(0, 0, 100%);
+  --noir:hsl(0, 0, 0);
+}
+
 /* mixin ---------------  */
 html {
   -webkit-box-sizing: border-box;
@@ -44,7 +51,7 @@ img {
 /* navFooter */
 /* navLangue */
 nav.menu {
-  background-color: 0;
+  background-color: red;
 }
 
 /* footer  */
