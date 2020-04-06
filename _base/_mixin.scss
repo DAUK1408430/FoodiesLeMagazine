@@ -1,1 +1,16 @@
 /* mixin ---------------  */
+
+//flex
+@mixin setFlex($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//breakPoint
+@mixin rwd-min-width($screen){
+    @media(min-width:$screen+'px'){
+        @content;
+    }
+}
