@@ -3,7 +3,21 @@
 ----------------------------------------------------------------------------------  */
 
 nav.menu{
-    background-color: var(--noir);
-    @include flex(row, center, center);
+
+    background-color: black;
+    height: 4vh;
     
+        & li{
+        display: none;
+        }
+
+        & > .material-icons{
+        color: white;
+        font-size: 4em;
+        
+        }   
+
 }
+
+//var
+//float déplace tout
