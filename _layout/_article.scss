@@ -1,3 +1,31 @@
-/*-------------------------4------------------------------------------------------ 
+/*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+
+article{
+    & > .entete{
+        background-color: yellowgreen;
+        color: white;
+        margin:2em 0 ;
+        padding:1em 0 ;
+        text-align: center;
+        
+    }
+    & > section.titre{
+        padding: 0.5em 1.5em;
+        
+    }
+
+        & section.titre > h2{
+        font-size: 4em;
+        font-weight: 300;
+        line-height: 1em;
+    }
+    & > section.titre > p{
+        opacity: 0.5;
+        padding-top:0,5em;
+    }
+}
+
+//font rétréci pas
+
