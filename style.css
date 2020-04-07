@@ -115,13 +115,18 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 20vh;
 }
 
 header img {
   width: 60vw;
   display: block;
   margin: auto;
+}
+
+@media only screen and (min-width: 740px) {
+  header {
+    background-image: url(../foodiesImg/header-assets/photo-740.jpg);
+  }
 }
 
 /*------------------------------------------------------------------------------- 
@@ -277,13 +282,13 @@ article.recette > p {
 /*-------------------------10------------------------------------------------------ 
 -----------------------Publicité----------------------------------------------
 ----------------------------------------------------------------------------------  */
-section.article .pub {
+section.article div img.pub {
   width: 40vw;
   display: block;
   margin: 6em auto 6em auto;
 }
 
-section.article .pub3 {
+section.article div img.pub3 {
   width: 40vw;
   position: absolute;
   top: 268em;
