@@ -1,7 +1,37 @@
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+section.article{
 
+    & .pub {
+        width: 40vw;
+        display: block;
+        margin: 6em auto 6em auto;
+    }
+
+    &  h3{
+        margin: 1rem 3rem;
+        font-size: 4rem;
+        color: var(--orange); //ça c'est correct
+        padding-bottom: 0.5em;
+        text-align: center;
+        line-height: 5rem;
+    }
+    &  h4{
+        margin: 1rem 3rem;
+        font-size: 2rem;
+        color: var(--orange); //ça c'est correct
+        padding-bottom: 0.5em;
+        text-align: center;
+        line-height: 5rem;
+    }
+
+
+    & img.recette{
+        width: 100vw;
+    }
+
+}
 article.principal{
     & > .entete{
         background-color: yellowgreen;
@@ -13,15 +43,16 @@ article.principal{
         
     }
     & > section.titre{
-        padding: 0.5em 1.5em;
+        padding: 1em 2em;
         
     }
 
-        & > section.titre > h2{
-        font-size: 4em;
-        font-weight: 300;
-        line-height: 1em;
+    & > section.titre > h2{
+    font-size: 4em;
+    font-weight: 300;
+    line-height: 1em;
     }
+    
     & > section.titre > p{
         opacity: 0.5;
         padding-top:0,5em;
@@ -36,11 +67,42 @@ article.principal{
     }
     & > p{
          font-weight: 600;
-         margin:0 3em;
+         margin:0 3em 0em 3em;
          text-align: center;
          line-height: 3em;
     }
 }
 
-//font rétréci pas
+.origine{
+
+    margin: 1rem 3rem;
+    text-align: justify;
+}
+
+.bonheur{
+    @include flex(column, center,center)
+    margin: 1rem 3rem;
+
+    & figure{
+        
+        align-content: center;
+        padding-bottom: 2rem;
+
+    }
+
+    & figure img{
+        width: 80vw;
+        display: block;
+    }
+
+    & figure p{
+        font-size: 0.7rem;
+    }
+}
+
+.recette{
+
+}
+
+
 

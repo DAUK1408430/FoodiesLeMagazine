@@ -1,23 +1,23 @@
-/*-------------------------9------------------------------------------------------ 
+/*------------------------------------------------------------------------------- 
 -----------------------NavPrincipale----------------------------------------------
 ----------------------------------------------------------------------------------  */
 
 nav.menu{
 
-    background-color: black;
-    height: 4vh;
+    background-color:black; //sa tu vois sa marche pas
+    height: 7vh;
+    
     
         & li{
         display: none;
         }
 
         & > .material-icons{
-        color: white;
-        font-size: 4em;
+        color: white;//pas oublierddddddddddddddddddddddd
+        font-size: 6em;
         
-        }   
+    }   
 
 }
 
-//var
 //float déplace tout

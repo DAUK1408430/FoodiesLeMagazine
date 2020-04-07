@@ -58,12 +58,12 @@ aside {
 /*-------------------------3------------------------------------------------------ 
 -----------------------sousGrilleContenu----------------------------------------------
 ----------------------------------------------------------------------------------  */
-/*-------------------------9------------------------------------------------------ 
+/*------------------------------------------------------------------------------- 
 -----------------------NavPrincipale----------------------------------------------
 ----------------------------------------------------------------------------------  */
 nav.menu {
   background-color: black;
-  height: 4vh;
+  height: 7vh;
 }
 
 nav.menu li {
@@ -72,7 +72,7 @@ nav.menu li {
 
 nav.menu > .material-icons {
   color: white;
-  font-size: 4em;
+  font-size: 6em;
 }
 
 /*------------------------------------------------------------------------------- 
@@ -85,13 +85,19 @@ nav.menu > .material-icons {
 -----------------------header----------------------------------------------
 ----------------------------------------------------------------------------------  */
 header {
-  display: block;
   background-image: url(../foodiesImg/header-assets/photo-480.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 100vw;
-  height: 37vh;
+  height: 20vh;
+}
+
+header img {
+  width: 60vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*------------------------------------------------------------------------------- 
@@ -100,6 +106,34 @@ header {
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+section.article .pub {
+  width: 40vw;
+  display: block;
+  margin: 6em auto 6em auto;
+}
+
+section.article h3 {
+  margin: 1rem 3rem;
+  font-size: 4rem;
+  color: var(--orange);
+  padding-bottom: 0.5em;
+  text-align: center;
+  line-height: 5rem;
+}
+
+section.article h4 {
+  margin: 1rem 3rem;
+  font-size: 2rem;
+  color: var(--orange);
+  padding-bottom: 0.5em;
+  text-align: center;
+  line-height: 5rem;
+}
+
+section.article img.recette {
+  width: 100vw;
+}
+
 article.principal > .entete {
   background-color: yellowgreen;
   color: white;
@@ -110,7 +144,7 @@ article.principal > .entete {
 }
 
 article.principal > section.titre {
-  padding: 0.5em 1.5em;
+  padding: 1em 2em;
 }
 
 article.principal > section.titre > h2 {
@@ -134,9 +168,46 @@ article.principal > .manShapeMobile {
 
 article.principal > p {
   font-weight: 600;
-  margin: 0 3em;
+  margin: 0 3em 0em 3em;
   text-align: center;
   line-height: 3em;
+}
+
+.origine {
+  margin: 1rem 3rem;
+  text-align: justify;
+}
+
+.bonheur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 3rem;
+}
+
+.bonheur figure {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-bottom: 2rem;
+}
+
+.bonheur figure img {
+  width: 80vw;
+  display: block;
+}
+
+.bonheur figure p {
+  font-size: 0.7rem;
 }
 
 /*-------------------------10------------------------------------------------------ 
