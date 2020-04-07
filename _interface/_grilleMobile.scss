@@ -5,3 +5,23 @@
 aside{
     display: none;
 }
+
+div.interface{
+    display: grid;
+    grid-template-areas:
+    'header'
+    'aside'
+    'section';
+}
+
+header{
+    grid-area: 'header';
+}
+
+aside{
+    grid-area: 'aside'
+}
+
+section.article{
+    grid-area: 'section'
+}

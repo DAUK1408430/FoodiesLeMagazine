@@ -55,6 +55,24 @@ aside {
   display: none;
 }
 
+div.interface {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'header' 'aside' 'section';
+}
+
+header {
+  grid-area: 'header';
+}
+
+aside {
+  grid-area: 'aside';
+}
+
+section.article {
+  grid-area: 'section';
+}
+
 /*-------------------------3------------------------------------------------------ 
 -----------------------sousGrilleContenu----------------------------------------------
 ----------------------------------------------------------------------------------  */
@@ -122,12 +140,15 @@ section.article h3 {
 }
 
 section.article h4 {
-  margin: 1rem 3rem;
+  background-color: white;
+  margin: 0 10rem;
+  padding: 4rem 1rem;
+  border: 2px solid green;
   font-size: 2rem;
-  color: var(--orange);
-  padding-bottom: 0.5em;
   text-align: center;
   line-height: 5rem;
+  position: relative;
+  bottom: 7rem;
 }
 
 section.article img.recette {

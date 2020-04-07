@@ -18,12 +18,15 @@ section.article{
         line-height: 5rem;
     }
     &  h4{
-        margin: 1rem 3rem;
+        background-color: white;//*******************
+        margin: 0 10rem;
+        padding: 4rem 1rem;
+        border: 2px solid green;//*******************
         font-size: 2rem;
-        color: var(--orange); //ça c'est correct
-        padding-bottom: 0.5em;
         text-align: center;
         line-height: 5rem;
+        position: relative;
+        bottom:7rem
     }
 
 
@@ -80,7 +83,7 @@ article.principal{
 }
 
 .bonheur{
-    @include flex(column, center,center)
+    @include flex(column, center,center);
     margin: 1rem 3rem;
 
     & figure{
