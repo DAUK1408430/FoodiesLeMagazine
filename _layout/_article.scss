@@ -3,15 +3,9 @@
 ----------------------------------------------------------------------------------  */
 section.article{
 
-    & .pub {
-        width: 40vw;
-        display: block;
-        margin: 6em auto 6em auto;
-    }
-
     &  h3{
-        margin: 1rem 3rem;
-        font-size: 4rem;
+        margin: 0rem 3rem;
+        font-size: 3rem;
         color: var(--orange); //ça c'est correct
         padding-bottom: 0.5em;
         text-align: center;
@@ -32,19 +26,17 @@ section.article{
     & img.recette{
         width: 100vw;
     }
-    
-
 }
 article.principal{
     & > .entete{
         background-color: yellowgreen;//*******************
         color: white;//*******************
-        margin:2em 0 ;
-        padding:1em 0 ;
+        margin:3rem 0 2rem ;
+        padding:1rem 0 ;
         text-align: center;
         font-weight: 100;
-        
     }
+
     & > section.titre{
         padding: 1em 2em;
         
@@ -60,14 +52,15 @@ article.principal{
         opacity: 0.5;
         padding-top:0,5em;
     }
+
     & > .manShapeMobile{
         display: block;
         margin-left: auto;
         margin-right: auto;
         padding: 5em 0;
         width: 50vw;
-
     }
+
     & > p{
          font-weight: 600;
          margin:0 3em 0em 3em;
@@ -84,7 +77,7 @@ article.principal{
 
 .bonheur{
     @include flex(column, center,center);
-    margin: 1rem 3rem;
+    margin: 1rem 3rem 35rem;
 
     & figure{
         
@@ -117,15 +110,17 @@ article.recette{
 
     & p{
         font-size: 1.1rem;
-        margin: 1rem 3rem;
+        margin: -3rem 3rem 1rem 3rem;
         text-align: justify;
-        padding-bottom: 3rem ;
+        padding-bottom: 3rem;
     }
 
-    & section{
-        
+    & > p{
+        margin: 0 3rem;
     }
 }
 
-
+@media only screen and (min-width: 740px) {
+    
+  }
 

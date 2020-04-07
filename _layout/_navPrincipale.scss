@@ -4,17 +4,18 @@
 
 nav.menu{
 
-    background-color:black; //sa tu vois sa marche pas
-    height: 7vh;
-    
-    
         & li{
         display: none;
         }
 
-        & > .material-icons{
-        color: white;//pas oublierddddddddddddddddddddddd
-        font-size: 6em;
+        & i{
+        color: white;//pas oublier************************
+        font-size: 6rem;
+        float: right;
+        padding: 0.8rem 2rem 0 0;
+        position: absolute;
+        top:0;
+        right: 0;
         
     }   
 
