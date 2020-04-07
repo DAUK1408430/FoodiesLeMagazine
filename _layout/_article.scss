@@ -29,16 +29,16 @@ section.article{
         bottom:7rem
     }
 
-
     & img.recette{
         width: 100vw;
     }
+    
 
 }
 article.principal{
     & > .entete{
-        background-color: yellowgreen;
-        color: white;
+        background-color: yellowgreen;//*******************
+        color: white;//*******************
         margin:2em 0 ;
         padding:1em 0 ;
         text-align: center;
@@ -103,8 +103,28 @@ article.principal{
     }
 }
 
-.recette{
+article.recette{
+    @include flex(column, center, center);
 
+    & a p{
+        background-color: green;//*************************
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin: 0 17rem 5rem;
+        border-radius: 7px;
+    }
+
+    & p{
+        font-size: 1.1rem;
+        margin: 1rem 3rem;
+        text-align: justify;
+        padding-bottom: 3rem ;
+    }
+
+    & section{
+        
+    }
 }
 
 
