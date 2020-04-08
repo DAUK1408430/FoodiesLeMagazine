@@ -79,8 +79,19 @@ section.article {
 /*------------------------------------------------------------------------------- 
 -----------------------NavPrincipale----------------------------------------------
 ----------------------------------------------------------------------------------  */
+nav.menu ul {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+}
+
 nav.menu li {
-  display: none;
+  color: white;
+}
+
+nav.menu li img {
+  width: 4rem;
+  color: white;
 }
 
 nav.menu i {
@@ -89,8 +100,6 @@ nav.menu i {
   float: right;
   padding: 0.8rem 2rem 0 0;
   position: absolute;
-  top: 0;
-  right: 0;
 }
 
 /*------------------------------------------------------------------------------- 

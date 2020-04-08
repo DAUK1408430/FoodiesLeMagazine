@@ -4,9 +4,24 @@
 
 nav.menu{
 
-        & li{
-        display: none;
+        & ul{
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+            
         }
+
+        & li{
+            
+            color: white;
+            
+            & img{
+                width: 4rem;
+                color: white;
+                
+            }
+        }
+        
 
         & i{
         color: white;//pas oublier************************
@@ -14,8 +29,7 @@ nav.menu{
         float: right;
         padding: 0.8rem 2rem 0 0;
         position: absolute;
-        top:0;
-        right: 0;
+        
         
     }   
 
