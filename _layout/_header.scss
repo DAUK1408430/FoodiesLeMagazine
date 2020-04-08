@@ -3,11 +3,11 @@
 ----------------------------------------------------------------------------------  */
 
 header{
-    @include flex(column, center, center);
+
     background-image: url(../foodiesImg/header-assets/photo-480.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size:contain;
     width: 100vw;
     
 
@@ -15,12 +15,9 @@ header{
         width: 60vw;
         display: block;
         margin:auto;
-        
     }
 }
 
 @media only screen and (min-width: 740px) {
-    header{
-        background-image: url(../foodiesImg/header-assets/photo-740.jpg);
-    }
+    
 }
