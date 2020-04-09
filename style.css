@@ -98,6 +98,7 @@ nav {
   z-index: 1500;
   background-color: black;
   color: var(--blanc);
+  position: fixed;
 }
 
 nav ul {
@@ -153,6 +154,16 @@ i {
   z-index: 1600;
 }
 
+/*////[Navigation principale programmation]
+________________________________________________________*/
+.nav-principale-close {
+  left: -1000px;
+}
+
+.nav-principale-open {
+  left: 0px;
+}
+
 /*------------------------------------------------------------------------------- 
 -----------------------header----------------------------------------------
 ----------------------------------------------------------------------------------  */
@@ -160,8 +171,9 @@ header {
   background-image: url(../foodiesImg/header-assets/photo-480.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   width: 100vw;
+  height: 15vh;
 }
 
 header img {
