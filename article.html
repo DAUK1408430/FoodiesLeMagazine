@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- jQuery  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery. min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Animate CSS :  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs /animate. css/3.7.2/animate.min.css">
     <!-- menu burger -->
@@ -21,7 +21,7 @@
 
 		<header>
             <i class="fas fa-bars menuMobile"  tabindex="0"></i>
-            <nav class="nav-principale nav-principale-close"> 
+            <nav class="nav-principale"> 
                 <ul>
                     <li><img src="foodiesImg/icone/menu.svg" alt="menu"><a href="#">Recettes</a> </li>
                     <li><img src="foodiesImg/icone/wine.svg" alt="vin"><a href="#">Accords mets-vins</a> </li>
@@ -104,5 +104,19 @@
 		</section>
 	</div>
 	<footer><div class="copyright">©CSTJ | Techniques d'intégration multimédia 2020<br/>travail de mi-session</div></footer>
+    <!-- //* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Gestion des évènements d'interaction
+    * 
+    */ -->
+    <script>
+
+   $(function(){
+    
+       $('.menuMobile').on('click', function(){
+            $('.menuMobile').css("background-color", "red");
+            $('nav').toggleClass('nav-principale-open');
+        });
+   });
+</script>
 </body>
 </html>
