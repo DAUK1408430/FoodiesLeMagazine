@@ -44,11 +44,11 @@ nav{
 
 /*////[Navigation principale programmation]
 ________________________________________________________*/
-.nav-principale-close{
-    left:-1000px;
-}
-.nav-principale-open{
+.nav-principale{
     left:0px;
+    &:not(.nav-principale-open){
+        left:-1000px;
+    }
 }
 
     

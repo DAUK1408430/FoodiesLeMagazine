@@ -156,12 +156,12 @@ i {
 
 /*////[Navigation principale programmation]
 ________________________________________________________*/
-.nav-principale-close {
-  left: -1000px;
+.nav-principale {
+  left: 0px;
 }
 
-.nav-principale-open {
-  left: 0px;
+.nav-principale:not(.nav-principale-open) {
+  left: -1000px;
 }
 
 /*------------------------------------------------------------------------------- 
