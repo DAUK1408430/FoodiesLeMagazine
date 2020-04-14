@@ -1,11 +1,10 @@
 @charset "UTF-8";
-/*sdfsfdsdfdsfs*/
 /* variables  */
 :root {
   --vert: hsl(66, 40%, 50%);
   --orange: hsl(14, 80%, 50%);
-  --blanc: hsl(0, 0, 100%);
-  --noir: hsl(0, 0, 0);
+  --blanc: hsl(0, 0%, 100%);
+  --noir: hsl(0, 0%, 0%);
 }
 
 /* mixin ---------------  */
@@ -134,17 +133,19 @@ nav li {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.6em;
-  color: white;
-  border-bottom: 1px solid white;
+  color: var(--blanc);
+  border-bottom: 1px solid var(--blanc);
 }
 
 nav li img {
   width: 4rem;
-  color: white;
+  color: var(--blanc);
+  position: relative;
+  top: 3em;
 }
 
 i {
-  color: black;
+  color: var(--orange);
   font-size: 6rem;
   float: right;
   padding: 0.8rem 2rem 0 0;
@@ -168,26 +169,27 @@ ________________________________________________________*/
 -----------------------header----------------------------------------------
 ----------------------------------------------------------------------------------  */
 header {
-  background-image: url(../foodiesImg/header-assets/photo-480.jpg);
-  background-position: center;
+  background-image: url(../foodiesImg/headerVrai-assets/photo-480.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 15vh;
+  height: 30vh;
 }
 
 header img {
   width: 60vw;
   display: block;
   margin: auto;
+  position: relative;
+  top: 10em;
 }
 
 /*------------------------------------------------------------------------------- 
 -----------------------Footer----------------------------------------------
 ----------------------------------------------------------------------------------  */
 footer {
-  background-color: black;
-  color: white;
+  background-color: var(--noir);
+  color: var(--blanc);
   padding: 5rem;
   text-align: center;
 }
@@ -335,7 +337,7 @@ article.recette > p {
 /*-------------------------10------------------------------------------------------ 
 -----------------------Publicité----------------------------------------------
 ----------------------------------------------------------------------------------  */
-section.article div img.pub {
+section.article img.pub {
   width: 40vw;
   display: block;
   margin: 6em auto 6em auto;

@@ -21,16 +21,18 @@ nav{
         & li{
             @include flex(row,center,center);
             padding: 1.6em;
-            color: white;
-            border-bottom: 1px solid white;
+            color: var(--blanc);
+            border-bottom: 1px solid var(--blanc);
             & img{
                 width: 4rem;
-                color: white;
+                color: var(--blanc);
+                position: relative;
+                top:3em
             }
         }
     }
     i{
-    color: black;//pas oublier************************
+    color:var(--orange);//pas oublier************************
     font-size: 6rem;
     float: right;
     padding: 0.8rem 2rem 0 0;
