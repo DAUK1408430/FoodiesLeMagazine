@@ -159,10 +159,30 @@ i {
 ________________________________________________________*/
 .nav-principale {
   left: 0px;
+  -webkit-animation: fadeinMenu 1s;
+          animation: fadeinMenu 1s;
+}
+
+@-webkit-keyframes fadeinMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav-principale:not(.nav-principale-open) {
-  left: -1000px;
+  display: none;
 }
 
 /*------------------------------------------------------------------------------- 
@@ -346,7 +366,7 @@ section.article img.pub {
 section.article div img.pub3 {
   width: 40vw;
   position: absolute;
-  top: 268em;
+  top: 287.5em;
 }
 
 /*------------------------------------------------------------------------------- 

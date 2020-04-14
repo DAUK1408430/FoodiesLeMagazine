@@ -47,9 +47,18 @@ nav{
 /*////[Navigation principale programmation]
 ________________________________________________________*/
 .nav-principale{
+    @keyframes fadeinMenu {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity:1;
+        }
+    }
     left:0px;
+    animation: fadeinMenu 1s;
     &:not(.nav-principale-open){
-        left:-1000px;
+        display:none;
     }
 }
 
