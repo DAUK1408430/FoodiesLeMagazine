@@ -7,20 +7,21 @@ header{
     background-image: url(../foodiesImg/headerVrai-assets/photo-480.jpg);
     background-repeat: no-repeat;
     background-size:cover;
-    width: 100vw;
-    height: 30vh;
-    
-    
+    width: 100%;
+    height: 20rem;
 
     & img{
-        width: 60vw;
+        width: 60%;
         display: block;
         margin:auto;
         position: relative;
-        top: 10em;
+        top: 7em;
     }
 }
 
-@media only screen and (min-width: 740px) {
-    
+
+@media only screen and (min-width:740px){
+    header{
+        height: 35vh;
+    }
 }

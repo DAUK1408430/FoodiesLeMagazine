@@ -6,9 +6,9 @@ nav{
    
    @include flex(column,flex-start, flex-start);
    width:70%;
-   height: 100vh;
+   height: 100%;
    z-index: 1500;
-   background-color:black;
+   background-color:var(--noir);
    color:var(--blanc);
    position:fixed;
    
@@ -16,24 +16,21 @@ nav{
         & ul{
         @include flex(column,flex-start, flex-start);
          width: 100%;
-         height: 60%;
+         height: 100%;
         }
         & li{
             @include flex(row,center,center);
+            width: 100%;
             padding: 1.6em;
             color: var(--blanc);
             border-bottom: 1px solid var(--blanc);
-            & img{
-                width: 4rem;
-                color: var(--blanc);
-                position: relative;
-                top:3em
-            }
+            margin-left: 0;
+            text-align: left;
         }
     }
     i{
-    color:var(--orange);//pas oublier************************
-    font-size: 6rem;
+    color:var(--orange);
+    font-size: 5rem;
     float: right;
     padding: 0.8rem 2rem 0 0;
     position: fixed;

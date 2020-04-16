@@ -5,36 +5,38 @@ section.article{
 
     &  h3{
         margin: 0rem 3rem;
-        font-size: 3rem;
-        color: var(--orange); //ça c'est correct
+        font-size: 2rem;
+        color: var(--orange); 
         padding-bottom: 0.5em;
         text-align: center;
-        line-height: 5rem;
+        line-height: 3rem;
     }
     &  h4{
-        background-color: white;//*******************
-        margin: 0 10rem;
-        padding: 4rem 1rem;
-        border: 2px solid green;//*******************
+        background-color: var(--blanc);
+        margin: 0 10rem 3rem;
+        padding: 1rem 1rem;
+        border: 2px solid var(--vert);
         font-size: 2rem;
         text-align: center;
-        line-height: 5rem;
+        line-height: 3rem;
         position: relative;
-        bottom:7rem
+        bottom:4rem
     }
 
     & img.recette{
-        width: 100vw;
+        width: 100%;
     }
+    
 }
 article.principal{
     & > .entete{
-        background-color: yellowgreen;//*******************
-        color: white;//*******************
+        background-color: var(--vert);
+        color:  var(--blanc);
         margin:3rem 0 2rem ;
         padding:1rem 0 ;
         text-align: center;
         font-weight: 100;
+        font-size: 1.5rem;
     }
 
     & > section.titre{
@@ -43,7 +45,7 @@ article.principal{
     }
 
     & > section.titre > h2{
-    font-size: 4em;
+    font-size: 3rem;
     font-weight: 300;
     line-height: 1em;
     }
@@ -53,12 +55,15 @@ article.principal{
         padding-top:0,5em;
     }
 
+    & > .manShape{
+        display: none;
+    }
     & > .manShapeMobile{
         display: block;
         margin-left: auto;
         margin-right: auto;
         padding: 5em 0;
-        width: 50vw;
+        width: 50%;
     }
 
     & > p{
@@ -70,7 +75,6 @@ article.principal{
 }
 
 .origine{
-
     margin: 1rem 3rem;
     text-align: justify;
 }
@@ -87,7 +91,7 @@ article.principal{
     }
 
     & figure img{
-        width: 80vw;
+        width: 100vw;
         display: block;
     }
 
@@ -100,16 +104,16 @@ article.recette{
     @include flex(column, center, center);
 
     & a p{
-        background-color: green;//*************************
-        color: white;
+        background-color: var(--vert);
+        color: var(--blanc);
         text-align: center;
-        padding: 2rem;
-        margin: 0 17rem 5rem;
+        padding: 1rem;
+        margin: 0 13rem 5rem;
         border-radius: 7px;
     }
 
     & p{
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: -3rem 3rem 1rem 3rem;
         text-align: justify;
         padding-bottom: 3rem;
@@ -120,7 +124,62 @@ article.recette{
     }
 }
 
-@media only screen and (min-width: 740px) {
-    
-  }
 
+@media only screen and (min-width: 739px) {
+    
+    article.principal{
+        & > .entete{
+            margin:3rem 2rem 3rem 2rem;
+            padding:1.5rem 0 ;
+            font-size:1.5rem;
+        }
+
+        & > .manShapeMobile{
+            display:none;
+        }
+        & > .manShape{
+            display: block;
+            width: 30vw;
+            margin:2rem
+        }
+        
+    }
+
+    .origine{
+        @include flex(row-reverse,flex-start,flex-start);
+        margin-top:6em;
+
+        & p{
+            width: 90%;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    .bonheur{
+        @include flex(column, flex-start,flex-start);
+        margin:1rem 3rem 2rem;
+
+        & p{
+            width: 100%;
+            text-align: justify;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+
+        & figure p{
+            font-size: 1rem;
+        }
+    }
+
+    .recette{
+    display: block;   
+        & .premierP{
+            
+            font-size: 1.5rem;
+            line-height: 2rem;
+            width:50%;
+            margin: 0;
+        }
+    }
+}
