@@ -10,10 +10,17 @@ footer{
     text-align: center;
     font-size: 1.5rem;
     line-height: 3rem;
+    margin:0;
+
+    & .copyright{
+        margin:0
+
+    }
 }
 
-@media only screen and (min-width:740px){
+
+@include rwd-min-width(740){
     footer{
-        width:100%
+        width:100vw
     }
 }

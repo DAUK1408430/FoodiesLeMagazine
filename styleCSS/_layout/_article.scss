@@ -1,6 +1,8 @@
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+
+
 section.article{
 
     &  h3{
@@ -125,9 +127,18 @@ article.recette{
 }
 
 
-@media only screen and (min-width: 739px) {
+@media only screen and (min-width: 740px) {
+
+    section.article{
+        & h3{
+            margin:1rem 0;
+            text-align: left;
+        }
+    }
     
     article.principal{
+        margin:1rem;
+
         & > .entete{
             margin:3rem 2rem 3rem 2rem;
             padding:1.5rem 0 ;
@@ -142,11 +153,14 @@ article.recette{
             width: 30vw;
             margin:2rem
         }
+        & > p{
+            margin:6rem 3em 0em 3em;
+       }
         
     }
 
     .origine{
-        @include flex(row-reverse,flex-start,flex-start);
+        @include flex(row-reverse,flex-start,center);
         margin-top:6em;
 
         & p{
@@ -172,10 +186,11 @@ article.recette{
         }
     }
 
-    .recette{
-    display: block;   
+    article.recette{
+        @include flex(column,flex-start,flex-start);
+        margin:1rem 3rem 2rem;
+
         & .premierP{
-            
             font-size: 1.5rem;
             line-height: 2rem;
             width:50%;

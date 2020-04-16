@@ -50,28 +50,6 @@ img {
 /*-------------------------2------------------------------------------------------ 
 -----------------------grilleMobile----------------------------------------------
 ----------------------------------------------------------------------------------  */
-aside {
-  display: none;
-}
-
-div.interface {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: 'header' 'aside' 'section';
-}
-
-header {
-  grid-area: 'header';
-}
-
-aside {
-  grid-area: 'aside';
-}
-
-section.article {
-  grid-area: 'section';
-}
-
 /*-------------------------3------------------------------------------------------ 
 -----------------------sousGrilleContenu----------------------------------------------
 ----------------------------------------------------------------------------------  */
@@ -217,11 +195,16 @@ footer {
   text-align: center;
   font-size: 1.5rem;
   line-height: 3rem;
+  margin: 0;
 }
 
-@media only screen and (min-width: 740px) {
+footer .copyright {
+  margin: 0;
+}
+
+@media (min-width: 740px) {
   footer {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -370,7 +353,14 @@ article.recette > p {
   margin: 0 3rem;
 }
 
-@media only screen and (min-width: 739px) {
+@media only screen and (min-width: 740px) {
+  section.article h3 {
+    margin: 1rem 0;
+    text-align: left;
+  }
+  article.principal {
+    margin: 1rem;
+  }
   article.principal > .entete {
     margin: 3rem 2rem 3rem 2rem;
     padding: 1.5rem 0;
@@ -384,6 +374,9 @@ article.recette > p {
     width: 30vw;
     margin: 2rem;
   }
+  article.principal > p {
+    margin: 6rem 3em 0em 3em;
+  }
   .origine {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -395,9 +388,9 @@ article.recette > p {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 6em;
   }
   .origine p {
@@ -430,10 +423,23 @@ article.recette > p {
   .bonheur figure p {
     font-size: 1rem;
   }
-  .recette {
-    display: block;
+  article.recette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 1rem 3rem 2rem;
   }
-  .recette .premierP {
+  article.recette .premierP {
     font-size: 1.5rem;
     line-height: 2rem;
     width: 50%;
@@ -482,22 +488,30 @@ article .pub3 {
     height: 20rem;
     margin: 0 0 3rem 4rem;
     position: relative;
-    top: 1rem;
+    top: 3rem;
   }
   article .pub2 {
     width: 15rem;
     margin-left: 4rem;
     position: absolute;
+    right: 3rem;
+    top: 186rem;
   }
   article .pub3 {
     width: 15rem;
     margin-left: 4rem;
+    right: 3rem;
+    top: 219rem;
   }
 }
 
 /*------------------------------------------------------------------------------- 
 -----------------------Aside----------------------------------------------
 ----------------------------------------------------------------------------------  */
+aside {
+  display: none;
+}
+
 /*-------------------------11------------------------------------------------------ 
 -----------------------gallerieImage----------------------------------------------
 ----------------------------------------------------------------------------------  */
