@@ -70,7 +70,7 @@ nav {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 70%;
+  width: 100%;
   height: 100%;
   z-index: 1500;
   background-color: var(--noir);
@@ -100,22 +100,23 @@ nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   padding: 1.6em;
   color: var(--blanc);
   border-bottom: 1px solid var(--blanc);
   margin-left: 0;
   text-align: left;
+  font-size: 2rem;
 }
 
 i {
@@ -167,7 +168,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 20rem;
+  height: 16rem;
 }
 
 header img {
@@ -178,9 +179,20 @@ header img {
   top: 7em;
 }
 
+/*----------------------------------------------------------------
+---------------------media:740------------------------------------
+----------------------------------------------------------------*/
 @media only screen and (min-width: 740px) {
   header {
-    height: 35vh;
+    background-image: url(../foodiesImg/header-assets/photo-740.jpg);
+    height: 25rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    background-image: url(../foodiesImg/header-assets/photo-1024.jpg);
+    height: 35rem;
   }
 }
 
@@ -191,9 +203,9 @@ footer {
   width: 100%;
   background-color: var(--noir);
   color: var(--blanc);
-  padding: 5rem;
+  padding: 3rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 3rem;
   margin: 0;
 }
@@ -202,6 +214,9 @@ footer .copyright {
   margin: 0;
 }
 
+/*----------------------------------------------------------------
+---------------------media:740------------------------------------
+----------------------------------------------------------------*/
 @media (min-width: 740px) {
   footer {
     width: 100vw;
@@ -211,9 +226,42 @@ footer .copyright {
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+}
+
 section.article h3 {
-  margin: 0rem 3rem;
-  font-size: 2rem;
+  width: 85%;
+  font-size: 1.5rem;
   color: var(--orange);
   padding-bottom: 0.5em;
   text-align: center;
@@ -221,11 +269,13 @@ section.article h3 {
 }
 
 section.article h4 {
+  display: block;
+  width: 50%;
+  margin: 0 auto 3rem auto;
   background-color: var(--blanc);
-  margin: 0 10rem 3rem;
   padding: 1rem 1rem;
   border: 2px solid var(--vert);
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 3rem;
   position: relative;
@@ -281,8 +331,25 @@ article.principal > p {
 }
 
 .origine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 1rem 3rem;
   text-align: justify;
+}
+
+.origine h3 {
+  margin-left: 2rem;
 }
 
 .bonheur {
@@ -303,18 +370,24 @@ article.principal > p {
 }
 
 .bonheur figure {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   -ms-flex-line-pack: center;
       align-content: center;
   padding-bottom: 2rem;
 }
 
 .bonheur figure img {
-  width: 100vw;
-  display: block;
+  width: 100%;
 }
 
 .bonheur figure p {
   font-size: 0.7rem;
+}
+
+.bonheur p {
+  text-align: justify;
 }
 
 article.recette {
@@ -334,11 +407,12 @@ article.recette {
 }
 
 article.recette a p {
+  width: 40%;
   background-color: var(--vert);
   color: var(--blanc);
   text-align: center;
   padding: 1rem;
-  margin: 0 13rem 5rem;
+  margin: 2rem auto 3rem auto;
   border-radius: 7px;
 }
 
@@ -353,10 +427,14 @@ article.recette > p {
   margin: 0 3rem;
 }
 
+/*----------------------------------------------------------------
+---------------------media:740------------------------------------
+----------------------------------------------------------------*/
 @media only screen and (min-width: 740px) {
   section.article h3 {
     margin: 1rem 0;
     text-align: left;
+    font-size: 2rem;
   }
   article.principal {
     margin: 1rem;
@@ -371,7 +449,7 @@ article.recette > p {
   }
   article.principal > .manShape {
     display: block;
-    width: 30vw;
+    width: 30%;
     margin: 2rem;
   }
   article.principal > p {
@@ -394,7 +472,7 @@ article.recette > p {
     margin-top: 6em;
   }
   .origine p {
-    width: 90%;
+    width: 100%;
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -420,7 +498,8 @@ article.recette > p {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  .bonheur figure p {
+  .bonheur figure {
+    width: 40rem;
     font-size: 1rem;
   }
   article.recette {
@@ -442,8 +521,35 @@ article.recette > p {
   article.recette .premierP {
     font-size: 1.5rem;
     line-height: 2rem;
-    width: 50%;
+    width: 55%;
     margin: 0;
+  }
+  article.recette h4 {
+    font-size: 2rem;
+    width: 80%;
+    padding: 2rem;
+  }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1024------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+  .bonheur figure {
+    width: 56rem;
+    font-size: 1rem;
+  }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1600px) {
+  section.article {
+    width: 80%;
+  }
+  section.article .principal img {
+    display: none;
   }
 }
 
@@ -479,9 +585,12 @@ article .pub3 {
   font-size: 2rem;
   text-align: center;
   position: absolute;
-  top: 234rem;
+  top: 221rem;
 }
 
+/*----------------------------------------------------------------
+---------------------media:740------------------------------------
+----------------------------------------------------------------*/
 @media (min-width: 740px) {
   article .pub1 {
     width: 15rem;
@@ -495,13 +604,44 @@ article .pub3 {
     margin-left: 4rem;
     position: absolute;
     right: 3rem;
-    top: 186rem;
+    top: 179.5rem;
   }
   article .pub3 {
     width: 15rem;
     margin-left: 4rem;
     right: 3rem;
-    top: 219rem;
+    top: 210rem;
+  }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1024------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+  article .pub2 {
+    width: 12rem;
+    height: 12rem;
+    top: 183rem;
+  }
+  article .pub3 {
+    width: 12rem;
+    height: 12rem;
+    top: 208rem;
+  }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1600px) {
+  article .pub1 {
+    display: none;
+  }
+  article .pub2 {
+    display: none;
+  }
+  article .pub3 {
+    display: none;
   }
 }
 
@@ -510,6 +650,55 @@ article .pub3 {
 ----------------------------------------------------------------------------------  */
 aside {
   display: none;
+}
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1600px) {
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20%;
+  }
+  aside .Auteur {
+    padding-bottom: 7rem;
+  }
+  aside .Auteur img {
+    width: 18vw;
+    margin: 4rem 2rem;
+  }
+  aside .Auteur .prenom {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  aside .Auteur .famille {
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  aside div {
+    width: 18vw;
+    height: 40rem;
+    padding-top: 20rem;
+    margin: 5rem 0;
+    background-color: var(--noir);
+    color: var(--blanc);
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 
 /*-------------------------11------------------------------------------------------ 

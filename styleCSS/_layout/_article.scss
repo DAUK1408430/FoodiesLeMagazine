@@ -1,28 +1,35 @@
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
-
+main{
+    @include flex(row,flex-start,flex-start)
+    
+}
 
 section.article{
-
+    @include flex(column, center,center);
+        margin:0 1rem;
     &  h3{
-        margin: 0rem 3rem;
-        font-size: 2rem;
+        width:85%;
+        font-size: 1.5rem;
         color: var(--orange); 
         padding-bottom: 0.5em;
         text-align: center;
         line-height: 3rem;
     }
     &  h4{
+        display: block;
+        width:50%;
+        margin: 0 auto 3rem auto;
         background-color: var(--blanc);
-        margin: 0 10rem 3rem;
         padding: 1rem 1rem;
         border: 2px solid var(--vert);
-        font-size: 2rem;
+        font-size: 1.2rem;
         text-align: center;
         line-height: 3rem;
         position: relative;
-        bottom:4rem
+        bottom:4rem;
+
     }
 
     & img.recette{
@@ -77,8 +84,13 @@ article.principal{
 }
 
 .origine{
+    @include flex(column, center,center);
     margin: 1rem 3rem;
     text-align: justify;
+
+    & h3{
+        margin-left:2rem;
+    }
 }
 
 .bonheur{
@@ -86,19 +98,24 @@ article.principal{
     margin: 1rem 3rem 35rem;
 
     & figure{
-        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         align-content: center;
         padding-bottom: 2rem;
 
     }
 
     & figure img{
-        width: 100vw;
-        display: block;
+        width: 100%;
+        
     }
 
     & figure p{
         font-size: 0.7rem;
+    }
+    & p{
+        text-align: justify;
     }
 }
 
@@ -106,11 +123,12 @@ article.recette{
     @include flex(column, center, center);
 
     & a p{
+        width: 40%;
         background-color: var(--vert);
         color: var(--blanc);
         text-align: center;
         padding: 1rem;
-        margin: 0 13rem 5rem;
+        margin: 2rem auto 3rem auto;
         border-radius: 7px;
     }
 
@@ -125,7 +143,9 @@ article.recette{
         margin: 0 3rem;
     }
 }
-
+/*----------------------------------------------------------------
+---------------------media:740------------------------------------
+----------------------------------------------------------------*/
 
 @media only screen and (min-width: 740px) {
 
@@ -133,6 +153,7 @@ article.recette{
         & h3{
             margin:1rem 0;
             text-align: left;
+            font-size: 2rem;
         }
     }
     
@@ -150,7 +171,7 @@ article.recette{
         }
         & > .manShape{
             display: block;
-            width: 30vw;
+            width: 30%;
             margin:2rem
         }
         & > p{
@@ -164,7 +185,7 @@ article.recette{
         margin-top:6em;
 
         & p{
-            width: 90%;
+            width:100%;
             font-size: 1.5rem;
             line-height: 2rem;
         }
@@ -181,7 +202,8 @@ article.recette{
             line-height: 2rem;
         }
 
-        & figure p{
+        & figure {
+            width: 40rem;
             font-size: 1rem;
         }
     }
@@ -193,8 +215,42 @@ article.recette{
         & .premierP{
             font-size: 1.5rem;
             line-height: 2rem;
-            width:50%;
+            width:55%;
             margin: 0;
+        }
+        & h4{
+            font-size: 2rem;
+            width: 80%;
+            padding:2rem;
+        }
+    }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1024------------------------------------
+----------------------------------------------------------------*/
+@include rwd-min-width(1024){
+    .bonheur{
+    
+        & figure{
+            width: 56rem;
+            font-size: 1rem;
+        }
+    }
+}
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@include rwd-min-width(1600){
+
+    & section.article{
+        width: 80%;
+
+        & .principal{
+
+           & img{
+                display:none;
+            }
         }
     }
 }

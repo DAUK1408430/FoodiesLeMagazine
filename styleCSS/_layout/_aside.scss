@@ -5,3 +5,48 @@
 aside{
     display: none;
 }
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@include rwd-min-width(1600){
+    aside{
+        @include flex(column,center,center);
+        width: 20%;
+        & .Auteur{
+        
+            padding-bottom: 7rem;
+
+            & img{
+                width:18vw;
+                margin:4rem 2rem;
+            }
+
+            & .prenom{
+                font-size: 2rem;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            & .famille{
+                font-size: 2rem;
+                margin-top:2rem;
+                text-align: center;
+            }
+        }
+
+        & div{
+            width:18vw;
+            height:40rem ;
+            padding-top: 20rem;
+            margin:5rem 0;
+            background-color: var(--noir);
+            color: var(--blanc);
+            font-size: 3rem;
+            text-align: center;
+            
+        }
+        
+    }
+
+}
