@@ -121,7 +121,7 @@ nav li {
 
 i {
   color: var(--orange);
-  font-size: 5rem;
+  font-size: 3rem;
   float: right;
   padding: 0.8rem 2rem 0 0;
   position: fixed;
@@ -160,6 +160,59 @@ ________________________________________________________*/
   display: none;
 }
 
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1600px) {
+  .menuMobile {
+    display: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 5rem;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  nav ul li {
+    border-bottom: none;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .nav-principale {
+    left: 0px;
+    -webkit-animation: fadeinMenu 0s;
+            animation: fadeinMenu 0s;
+  }
+  .nav-principale:not(.nav-principale-open) {
+    display: block;
+  }
+}
+
 /*------------------------------------------------------------------------------- 
 -----------------------header----------------------------------------------
 ----------------------------------------------------------------------------------  */
@@ -176,7 +229,7 @@ header img {
   display: block;
   margin: auto;
   position: relative;
-  top: 7em;
+  top: 5em;
 }
 
 /*----------------------------------------------------------------
@@ -193,6 +246,19 @@ header img {
   header {
     background-image: url(../foodiesImg/header-assets/photo-1024.jpg);
     height: 35rem;
+  }
+}
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media only screen and (min-width: 1600px) {
+  header {
+    background-image: url(../foodiesImg/header-assets/photo-1600.jpg);
+    height: 45rem;
+  }
+  header img {
+    top: 8rem;
   }
 }
 
@@ -223,9 +289,34 @@ footer .copyright {
   }
 }
 
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media (min-width: 1600px) {
+  footer {
+    font-size: 2rem;
+  }
+}
+
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+.interface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,9 +325,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -315,12 +406,25 @@ article.principal > .manShape {
   display: none;
 }
 
-article.principal > .manShapeMobile {
+article.principal div .manShapeMobile {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 5em 0;
+  padding: 5em 0 2rem 0;
   width: 50%;
+}
+
+article.principal div .prenom {
+  font-weight: 600;
+  position: relative;
+  bottom: 6rem;
+  left: 12rem;
+}
+
+article.principal div .famille {
+  position: relative;
+  bottom: 6rem;
+  left: 12rem;
 }
 
 article.principal > p {
@@ -366,7 +470,7 @@ article.principal > p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 3rem 35rem;
+  margin: 1rem 3rem 5rem;
 }
 
 .bonheur figure {
@@ -404,6 +508,8 @@ article.recette {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 article.recette a p {
@@ -414,6 +520,10 @@ article.recette a p {
   padding: 1rem;
   margin: 2rem auto 3rem auto;
   border-radius: 7px;
+}
+
+article.recette a p:active {
+  opacity: 0.8;
 }
 
 article.recette p {
@@ -431,6 +541,9 @@ article.recette > p {
 ---------------------media:740------------------------------------
 ----------------------------------------------------------------*/
 @media only screen and (min-width: 740px) {
+  main {
+    width: 90%;
+  }
   section.article h3 {
     margin: 1rem 0;
     text-align: left;
@@ -444,8 +557,17 @@ article.recette > p {
     padding: 1.5rem 0;
     font-size: 1.5rem;
   }
-  article.principal > .manShapeMobile {
+  article.principal div .manShapeMobile {
     display: none;
+  }
+  article.principal div .prenom {
+    left: 18rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  article.principal div .famille {
+    left: 18rem;
+    font-size: 1.5rem;
   }
   article.principal > .manShape {
     display: block;
@@ -535,9 +657,29 @@ article.recette > p {
 ---------------------media:1024------------------------------------
 ----------------------------------------------------------------*/
 @media (min-width: 1024px) {
+  article.principal div .prenom {
+    left: 22rem;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  article.principal div .famille {
+    left: 22rem;
+    font-size: 1.5rem;
+  }
+  article.principal > .manShape {
+    display: block;
+    width: 30%;
+    margin: 2rem;
+  }
+  article.principal > p {
+    margin: 6rem 3em 0em 3em;
+  }
   .bonheur figure {
     width: 56rem;
     font-size: 1rem;
+  }
+  article.recette .premierP {
+    width: 77%;
   }
 }
 
@@ -545,11 +687,183 @@ article.recette > p {
 ---------------------media:1600------------------------------------
 ----------------------------------------------------------------*/
 @media (min-width: 1600px) {
-  section.article {
-    width: 80%;
+  main {
+    width: 90%;
+    background-color: var(--blanc);
+    position: relative;
+    bottom: 5rem;
   }
-  section.article .principal img {
+  main section.article {
+    width: 75%;
+    margin-top: 10rem;
+  }
+  main section.article .principal div {
+    width: 94%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+  }
+  main section.article .principal h2 {
+    font-size: 5rem;
+  }
+  main section.article .principal img {
     display: none;
+  }
+  main section.article .principal p {
+    font-size: 1.5rem;
+  }
+  main section.article .principal div p {
+    display: none;
+  }
+  main section.article .recette p {
+    width: 100%;
+  }
+  main section.article .recette a p:hover {
+    background-color: var(--orange);
+  }
+  main section.article .recette .saladeCrevette {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section.article .recette .saladeCrevette img {
+    width: 50%;
+  }
+  main section.article .recette .saladeCrevette div {
+    width: 50%;
+  }
+  main section.article .recette .saladeCrevette div h4 {
+    width: 100%;
+    position: inherit;
+    border: inherit;
+    text-align: left;
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 1rem 2rem;
+  }
+  main section.article .recette .saladeCrevette div p {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 2rem;
+    padding: 0;
+  }
+  main section.article .recette .saladeCrevette div a p {
+    width: 60%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  main section.article .recette .saladeCrevette div a {
+    padding: 0rem;
+  }
+  main section.article .recette .saladeTomate {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section.article .recette .saladeTomate img {
+    width: 50%;
+  }
+  main section.article .recette .saladeTomate div {
+    width: 50%;
+  }
+  main section.article .recette .saladeTomate div h4 {
+    width: 100%;
+    position: inherit;
+    border: inherit;
+    text-align: left;
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 1rem 2rem;
+  }
+  main section.article .recette .saladeTomate div p {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 2rem;
+    padding: 0;
+  }
+  main section.article .recette .saladeTomate div a p {
+    width: 60%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  main section.article .recette .saladeTomate div a {
+    padding: 0rem;
+  }
+  main section.article .recette .sandwich {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section.article .recette .sandwich img {
+    width: 50%;
+  }
+  main section.article .recette .sandwich div {
+    width: 50%;
+  }
+  main section.article .recette .sandwich div h4 {
+    width: 100%;
+    position: inherit;
+    border: inherit;
+    text-align: left;
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0;
+    margin: 1rem 2rem;
+  }
+  main section.article .recette .sandwich div p {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 2rem;
+    padding: 0;
+  }
+  main section.article .recette .sandwich div a p {
+    width: 60%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  main section.article .recette .sandwich diva {
+    padding: 0rem;
   }
 }
 
@@ -557,35 +871,23 @@ article.recette > p {
 -----------------------Publicité----------------------------------------------
 ----------------------------------------------------------------------------------  */
 article .pub1 {
-  margin: 8rem auto;
-  background-color: grey;
-  width: 20rem;
-  padding: 12rem 3rem;
+  margin: 5rem auto;
+  background-color: var(--noir);
+  width: 10rem;
+  padding: 8rem 3rem;
   color: var(--blanc);
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 article .pub2 {
-  background-color: grey;
+  margin: 5rem auto;
+  background-color: var(--noir);
+  width: 10rem;
   padding: 8rem 3rem;
-  width: 20rem;
-  margin: 8rem auto;
   color: var(--blanc);
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: center;
-}
-
-article .pub3 {
-  background-color: grey;
-  width: 20rem;
-  padding: 8rem 3rem;
-  margin: auto;
-  color: var(--blanc);
-  font-size: 2rem;
-  text-align: center;
-  position: absolute;
-  top: 221rem;
 }
 
 /*----------------------------------------------------------------
@@ -593,24 +895,15 @@ article .pub3 {
 ----------------------------------------------------------------*/
 @media (min-width: 740px) {
   article .pub1 {
-    width: 15rem;
-    height: 20rem;
     margin: 0 0 3rem 4rem;
     position: relative;
-    top: 3rem;
+    top: 1.5rem;
   }
   article .pub2 {
-    width: 15rem;
     margin-left: 4rem;
     position: absolute;
     right: 3rem;
-    top: 179.5rem;
-  }
-  article .pub3 {
-    width: 15rem;
-    margin-left: 4rem;
-    right: 3rem;
-    top: 210rem;
+    top: 192.5rem;
   }
 }
 
@@ -619,14 +912,7 @@ article .pub3 {
 ----------------------------------------------------------------*/
 @media (min-width: 1024px) {
   article .pub2 {
-    width: 12rem;
-    height: 12rem;
-    top: 183rem;
-  }
-  article .pub3 {
-    width: 12rem;
-    height: 12rem;
-    top: 208rem;
+    top: 193rem;
   }
 }
 
@@ -638,9 +924,6 @@ article .pub3 {
     display: none;
   }
   article .pub2 {
-    display: none;
-  }
-  article .pub3 {
     display: none;
   }
 }
@@ -670,7 +953,8 @@ aside {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 20%;
+    width: 25%;
+    margin-top: 8.5rem;
   }
   aside .Auteur {
     padding-bottom: 7rem;

@@ -4,38 +4,25 @@
 
 article{
     & .pub1{
-        margin: 8rem auto;
-        background-color: grey;
-        width:20rem;
-        padding:12rem 3rem;
+        margin: 5rem auto;
+        background-color:var(--noir);
+        width:10rem;
+        padding:8rem 3rem;
         color:var(--blanc);
-        font-size:2rem;
+        font-size:1rem;
         text-align: center;
         
     }
 
 
     & .pub2{
-        background-color: grey;
+        margin: 5rem auto;
+        background-color:var(--noir);
+        width:10rem;
         padding:8rem 3rem;
-        width:20rem;
-        margin:8rem auto;
         color:var(--blanc);
-        font-size:2rem;
-        text-align: center;
-        
-    }
-
-    & .pub3{
-        background-color: grey;
-        width:20rem;
-        padding:8rem 3rem;
-        margin:auto;
-        color:var(--blanc);
-        font-size:2rem;
-        text-align: center;
-        position: absolute;
-        top:221rem
+        font-size:1rem;
+        text-align: center;   
     }
     
 }
@@ -46,27 +33,16 @@ article{
 @include rwd-min-width(740){
     article{
         & .pub1 {
-            width:15rem;
-            height:20rem;
             margin:0 0 3rem 4rem;
             position: relative;
-            top: 3rem;
-        
+            top: 1.5rem;
         }
         & .pub2 {
-            width:15rem;
             margin-left:4rem;
             position: absolute;
             right:3rem;
-            top:179.5rem;
+            top:192.5rem;
         }
-        & .pub3 {
-            width:15rem;
-            margin-left:4rem;
-            right:3rem;
-            top:210rem
-        }
-        
     }
 }
 
@@ -76,18 +52,9 @@ article{
 
 @include rwd-min-width(1024){
         article{
-            
             & .pub2 {
-                width: 12rem;
-                height: 12rem;
-                top:183rem;
+                top:193rem;
             }
-            & .pub3 {
-                width: 12rem;
-                height: 12rem;
-                top:208rem;
-            }
-            
         }
 }
 /*----------------------------------------------------------------
@@ -101,10 +68,5 @@ article{
         & .pub2 {
             display: none;
         }
-        & .pub3 {
-            display: none;
-        }
-        
     }
-
 }

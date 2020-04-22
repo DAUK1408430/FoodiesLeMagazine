@@ -1,8 +1,12 @@
 /*------------------------------------------------------------------------------- 
 -----------------------ListeProduit----------------------------------------------
 ----------------------------------------------------------------------------------  */
+.interface{
+    @include flex(column,center,center)
+}
+
 main{
-    @include flex(row,flex-start,flex-start)
+    @include flex(row,center,flex-start)
     
 }
 
@@ -67,12 +71,26 @@ article.principal{
     & > .manShape{
         display: none;
     }
-    & > .manShapeMobile{
+    & div{ 
+        & .manShapeMobile{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        padding: 5em 0;
+        padding: 5em 0 2rem 0;
         width: 50%;
+        }
+
+        & .prenom{
+            font-weight:600;
+            position: relative;
+            bottom:6rem;
+            left:12rem
+        }
+        & .famille{
+            position: relative;
+            bottom:6rem;
+            left:12rem
+        }
     }
 
     & > p{
@@ -81,6 +99,7 @@ article.principal{
          text-align: center;
          line-height: 3em;
     }
+    
 }
 
 .origine{
@@ -95,7 +114,7 @@ article.principal{
 
 .bonheur{
     @include flex(column, center,center);
-    margin: 1rem 3rem 35rem;
+    margin: 1rem 3rem 5rem;
 
     & figure{
         display: block;
@@ -121,6 +140,8 @@ article.principal{
 
 article.recette{
     @include flex(column, center, center);
+    margin:0;
+    padding:0;
 
     & a p{
         width: 40%;
@@ -130,6 +151,9 @@ article.recette{
         padding: 1rem;
         margin: 2rem auto 3rem auto;
         border-radius: 7px;
+    }
+    & a p:active{
+        opacity: 0.8;
     }
 
     & p{
@@ -148,8 +172,12 @@ article.recette{
 ----------------------------------------------------------------*/
 
 @media only screen and (min-width: 740px) {
+    main{
+        width: 90%;
+    }
 
     section.article{
+
         & h3{
             margin:1rem 0;
             text-align: left;
@@ -166,8 +194,20 @@ article.recette{
             font-size:1.5rem;
         }
 
-        & > .manShapeMobile{
-            display:none;
+        & div{
+             & .manShapeMobile{
+                 display:none;
+             }
+             & .prenom{
+                left:18rem;
+                font-size:1.5rem;
+                padding-bottom: 1rem;
+            }
+            & .famille{
+                left:18rem;
+                font-size:1.5rem;
+            }
+
         }
         & > .manShape{
             display: block;
@@ -230,11 +270,42 @@ article.recette{
 ---------------------media:1024------------------------------------
 ----------------------------------------------------------------*/
 @include rwd-min-width(1024){
+    
+    
+    article.principal{
+
+        & div{
+             & .prenom{
+                left:22rem;
+                font-size:1.5rem;
+                padding-bottom: 1rem;
+            }
+            & .famille{
+                left:22rem;
+                font-size:1.5rem;
+            }
+
+        }
+        & > .manShape{
+            display: block;
+            width: 30%;
+            margin:2rem
+        }
+        & > p{
+            margin:6rem 3em 0em 3em;
+       }
+        
+    }
     .bonheur{
     
         & figure{
             width: 56rem;
             font-size: 1rem;
+        }
+    }
+    article.recette{
+        & .premierP{
+            width:77%;
         }
     }
 }
@@ -243,13 +314,173 @@ article.recette{
 ----------------------------------------------------------------*/
 @include rwd-min-width(1600){
 
-    & section.article{
-        width: 80%;
+    & main{
+        width: 90%;
+        background-color: var(--blanc);
+        position: relative;
+        bottom:5rem;
+        
+        
+        & section.article{
+            width: 75%;
+            margin-top:10rem;
+            
+            & .principal{
+                & div {
+                    width: 94%;
+                    position: absolute;
+                    top:0rem;
+                    left: 0rem;
+                    
+                }
 
-        & .principal{
+                & h2{
+                    font-size: 5rem;
+                }
+               & img{
+                    display:none;
+                }
+                & p{
+                    font-size: 1.5rem;
+                }
+                & div p{
+                    display: none;
+                }
+            }
 
-           & img{
-                display:none;
+            & .recette{
+                & p{
+
+                    width: 100%;
+                }
+                & a p:hover{
+                    background-color: var(--orange);
+                }
+
+                & .saladeCrevette{
+                    margin-top:5rem;
+                    @include flex(row,flex-start,flex-start);
+
+                    & img{
+                        width:50%
+                    }
+
+                    & div{
+                        
+                        width: 50%;
+                        & h4{
+                            width: 100%;
+                            position: inherit;
+                            border: inherit;
+                            text-align: left;
+                            display: block;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            padding:0;
+                            margin:1rem 2rem;
+                        }
+                        & p{
+                            width:100%;
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                            margin:1rem 2rem;
+                            padding:0
+                        }
+                        & a p{
+                            width: 60%;
+                            padding:1rem 0;
+                            margin-top:2rem;
+                        }
+
+                        & a{
+                            padding:0rem;
+                        }
+
+                    }
+                }
+                & .saladeTomate{
+                    margin-top:5rem;
+                    @include flex(row,flex-start,flex-start);
+
+                    & img{
+                        width:50%
+                    }
+
+                    & div{
+                        
+                        width: 50%;
+
+                        & h4{
+                            width: 100%;
+                            position: inherit;
+                            border: inherit;
+                            text-align: left;
+                            display: block;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            padding:0;
+                            margin:1rem 2rem;
+                        }
+                        & p{
+                            width:100%;
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                            margin:1rem 2rem;
+                            padding:0
+                        }
+                        & a p{
+                            width: 60%;
+                            padding:1rem 0;
+                            margin-top:2rem;
+                        }
+
+                        & a{
+                            padding:0rem;
+                        }
+
+                    }
+                }
+                & .sandwich{
+                    margin-top:5rem;
+                    @include flex(row,flex-start,flex-start);
+
+                    & img{
+                        width:50%
+                    }
+
+                    & div{
+                        
+                        width: 50%;
+                        & h4{
+                            width: 100%;
+                            position: inherit;
+                            border: inherit;
+                            text-align: left;
+                            display: block;
+                            font-size: 1.7rem;
+                            font-weight: 600;
+                            padding:0;
+                            margin:1rem 2rem;
+                        }
+                        & p{
+                            width:100%;
+                            font-size: 1.5rem;
+                            line-height: 2rem;
+                            margin:1rem 2rem;
+                            padding:0
+                        }
+                        & a p{
+                            width: 60%;
+                            padding:1rem 0;
+                            margin-top:2rem;
+                        }
+
+                        &a{
+                            padding:0rem;
+                        }
+
+                    }
+                }
             }
         }
     }

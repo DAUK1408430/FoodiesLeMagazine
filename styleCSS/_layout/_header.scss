@@ -15,7 +15,7 @@ header{
         display: block;
         margin:auto;
         position: relative;
-        top: 7em;
+        top: 5em;
     }
 }
 
@@ -34,5 +34,20 @@ header{
     header{
         background-image: url(../foodiesImg/header-assets/photo-1024.jpg);
         height: 35rem;
+    }
+}
+
+
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+@media only screen and (min-width:1600px){
+    header{
+        background-image: url(../foodiesImg/header-assets/photo-1600.jpg);
+        height: 45rem;
+
+        & img{
+            top:8rem;
+        }
     }
 }

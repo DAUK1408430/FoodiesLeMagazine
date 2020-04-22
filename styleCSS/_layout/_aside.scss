@@ -12,7 +12,8 @@ aside{
 @include rwd-min-width(1600){
     aside{
         @include flex(column,center,center);
-        width: 20%;
+        width: 25%;
+        margin-top:8.5rem;
         & .Auteur{
         
             padding-bottom: 7rem;

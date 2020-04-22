@@ -29,16 +29,17 @@ nav{
             font-size: 2rem;
         }
     }
+
     i{
     color:var(--orange);
-    font-size: 5rem;
+    font-size: 3rem;
     float: right;
     padding: 0.8rem 2rem 0 0;
     position: fixed;
     right: 1rem;
     top: 1rem;
     z-index: 1600;
-}   
+    }   
 
 
 
@@ -60,5 +61,38 @@ ________________________________________________________*/
     }
 }
 
-    
-//float déplace tout
+/*----------------------------------------------------------------
+---------------------media:1600------------------------------------
+----------------------------------------------------------------*/
+
+@include rwd-min-width(1600){
+
+    .menuMobile{
+        display: none;
+    }
+
+    nav{
+        @include flex(row,center, center);
+        height: 5rem;
+
+        & ul{
+            @include flex(row,space-around, center);
+            margin: 0;
+
+            & li{
+                border-bottom: none;
+                font-size: 1.3rem;
+                padding: 0;
+                
+            }
+        }
+    }
+
+    .nav-principale{
+        left:0px;
+        animation: fadeinMenu 0s;
+        &:not(.nav-principale-open){
+            display:block;
+        }
+    }
+}
