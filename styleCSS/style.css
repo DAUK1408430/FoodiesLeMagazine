@@ -104,12 +104,12 @@ nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   padding: 1.6em;
   color: var(--blanc);
@@ -119,14 +119,21 @@ nav li {
   font-size: 2rem;
 }
 
+nav li:active {
+  opacity: 0.8;
+}
+
+nav li:hover {
+  background-color: var(--orange);
+}
+
 i {
   color: var(--orange);
   font-size: 3rem;
-  float: right;
   padding: 0.8rem 2rem 0 0;
   position: fixed;
-  right: 1rem;
-  top: 1rem;
+  right: 0;
+  top: 0rem;
   z-index: 1600;
 }
 
@@ -168,6 +175,9 @@ ________________________________________________________*/
     display: none;
   }
   nav {
+    height: 5rem;
+  }
+  nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -181,27 +191,12 @@ ________________________________________________________*/
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 5rem;
-  }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin: 0;
   }
   nav ul li {
     border-bottom: none;
-    font-size: 1.3rem;
-    padding: 0;
+    font-size: 1rem;
+    padding: 1.9rem 5rem;
   }
   .nav-principale {
     left: 0px;
@@ -255,7 +250,7 @@ header img {
 @media only screen and (min-width: 1600px) {
   header {
     background-image: url(../foodiesImg/header-assets/photo-1600.jpg);
-    height: 45rem;
+    height: 55rem;
   }
   header img {
     top: 8rem;
@@ -691,7 +686,7 @@ article.recette > p {
     width: 90%;
     background-color: var(--blanc);
     position: relative;
-    bottom: 5rem;
+    bottom: 12rem;
   }
   main section.article {
     width: 75%;

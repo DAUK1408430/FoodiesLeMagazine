@@ -19,7 +19,7 @@ nav{
          height: 100%;
         }
         & li{
-            @include flex(column,flex-start, flex-start);
+            @include flex(column,center, center);
             width: 100%;
             padding: 1.6em;
             color: var(--blanc);
@@ -28,16 +28,21 @@ nav{
             text-align: left;
             font-size: 2rem;
         }
+        & li:active{
+            opacity: 0.8;
+        }
+        & li:hover{
+            background-color: var(--orange);
+        }
     }
 
     i{
     color:var(--orange);
     font-size: 3rem;
-    float: right;
     padding: 0.8rem 2rem 0 0;
     position: fixed;
-    right: 1rem;
-    top: 1rem;
+    right: 0;
+    top: 0rem;
     z-index: 1600;
     }   
 
@@ -72,17 +77,16 @@ ________________________________________________________*/
     }
 
     nav{
-        @include flex(row,center, center);
         height: 5rem;
 
         & ul{
-            @include flex(row,space-around, center);
+            @include flex(row,center, center);
             margin: 0;
 
             & li{
                 border-bottom: none;
-                font-size: 1.3rem;
-                padding: 0;
+                font-size: 1rem;
+                padding:1.9rem 5rem;
                 
             }
         }
